@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    volumes:
+      - ./nodejs:/usr/src/app
+    depends_on:
+      - influxdb
+      - redis
+
+  influxdb:
+    image: influxdb:alpine
+    volumes:
+      - ./influxdb.conf:/etc/influxdb/influxdb.conf:ro
+    networks:
+      - docker-setup
+
+  redis:
+    image: redis:alpine
+    volumes:
+      - redis-data:/data
+    networks:
+      - docker-setup
+
+volumes:
+  redis-data:
+
+networks:
+  docker-setup:
+

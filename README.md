@@ -1,5 +1,13 @@
 # docker-setup
 
+## start all services
+
+docker-compose up -d
+
+## stop all services
+
+docker-compose down
+
 ## run InfluxDB in background with custom config file
 
 docker run --name influxdb -d -v $PWD/influxdb.conf:/etc/influxdb/influxdb.conf:ro influxdb:alpine -config /etc/influxdb/influxdb.conf
