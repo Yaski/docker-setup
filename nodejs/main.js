@@ -13,7 +13,7 @@ async function test() {
     database: "test"
    });
 
-  let redis = asyncRedis.createClient();
+  let redis = asyncRedis.createClient({host: 'redis'});
 
   let rValue = await redis.get('test');
   console.log('Old redis value', rValue);
