@@ -11,7 +11,9 @@ async function test() {
     username: "",
     password: "",
     database: "test"
-   });
+  });
+
+  await influxdb.createDatabase('test');
 
   let redis = asyncRedis.createClient({host: 'redis'});
 
