@@ -6,7 +6,7 @@ const asyncRedis = require("async-redis");
 
 async function test() {
   let influxdb = new Influx.InfluxDB({
-    host: "127.0.0.1",
+    host: "influxdb",
     port: "8086",
     username: "",
     password: "",
