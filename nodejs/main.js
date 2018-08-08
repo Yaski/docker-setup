@@ -28,7 +28,7 @@ async function test() {
 
   let rawData = await influxdb.queryRaw(`SELECT * FROM "test"."autogen"."one" WHERE time > now() - 1h`);
   console.log('Influx value');
-  console.log(rawData);
+  console.log(JSON.stringify(rawData));
 }
 
 test();
