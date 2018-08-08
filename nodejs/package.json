@@ -1,0 +1,29 @@
+{
+  "name": "docker-setup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "NODE_PATH=lib node main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yaski/docker-setup.git"
+  },
+  "keywords": [
+    "influxdb",
+    "redis"
+  ],
+  "author": "Yaski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yaski/docker-setup/issues"
+  },
+  "homepage": "https://github.com/Yaski/docker-setup#readme",
+  "dependencies": {
+    "async-redis": "1.1.4",
+    "influx": "5.0.7",
+    "underscore": "1.9.1"
+  }
+}
