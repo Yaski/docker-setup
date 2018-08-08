@@ -26,7 +26,7 @@ async function test() {
     field: 5000 * Math.random()
   }}]);
 
-  let rawData = await influxdb.queryRaw(`SELECT * FROM "test.autogen.one" WHERE time > now() - 1h`);
+  let rawData = await influxdb.queryRaw(`SELECT * FROM "test"."autogen"."one" WHERE time > now() - 1h`);
   console.log('Influx value');
   console.log(rawData);
 }
